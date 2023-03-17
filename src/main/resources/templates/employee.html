@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>社員一覧</title>
+<meta charset="utf-8" />
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>社員ID</th>
+            <th>社員名</th>
+            <th>生年月日</th>
+            <th>入社日</th
+            <th>役職ID</th
+            <th>最寄り駅</th
+        </tr>
+        <tr th:each="info: ${employeeList}">
+            <td th:text="${info.employee_id}"></td>
+            <td th:text="${info.employee_name}"></td>
+            <td th:text="${info.birthday}"></td>
+            <td th:text="${info.start_date}"></td>
+            <td th:text="${info.position_id}"></td>
+            <td th:text="${info.closest_st}"></td>
+        </tr>
+    </table>
+</body>
+</html>
