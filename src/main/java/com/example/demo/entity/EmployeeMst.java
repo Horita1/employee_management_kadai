@@ -9,11 +9,11 @@ public class EmployeeMst {
     /**
      * 社員ID
      */
-    private String employee_id;
+    private String employeeId;
     /**
      * 社員名
      */
-    private String employee_name;
+    private String employeeName;
     /**
      * 誕生日
      */
@@ -21,13 +21,13 @@ public class EmployeeMst {
     /**
      * 入社日
      */
-    private Date start_date;
+    private Date startDate;
 	/**
      * 役職ID
      */
-    private String position_id;
+    private String positionId;
     /**
      * 最寄り駅
      */
-    private String closest_st;
+    private String closestSt;
 }
