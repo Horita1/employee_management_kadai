@@ -1,5 +1,5 @@
 package com.example.demo.entity;
-import java.util.Date;
+import java.time.LocalDate;
 
 import lombok.Data;
 /**
@@ -18,9 +18,9 @@ public class PjMst {
     /**
      * 案件参画日
      */
-    private Date pjStartDate;
+    private LocalDate pjStartDate;
     /**
      * 案件終了日
      */
-    private Date pjEndDate;
+    private LocalDate pjEndDate;
 }

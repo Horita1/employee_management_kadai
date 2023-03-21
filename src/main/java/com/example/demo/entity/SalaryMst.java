@@ -8,9 +8,9 @@ public class SalaryMst {
     /**
      * 給料ID
      */
-    private String sararyId;
+    private String salaryId;
     /**
      * 給料
      */
-    private int sarary;
+    private int salary;
 }

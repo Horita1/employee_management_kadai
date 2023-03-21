@@ -1,8 +1,6 @@
 package com.example.demo.service;
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +13,7 @@ import com.example.demo.entity.PjMst;
 import com.example.demo.repository.EmployeeMstMapper;
 import com.example.demo.repository.PjMgmtTblMapper;
 import com.example.demo.repository.PjMstMapper;
+import com.example.demo.utils.Util;
 
 @Service
 public class EmployeeListService {
@@ -25,6 +24,9 @@ public class EmployeeListService {
 	private PjMstMapper pjMstMapper;
 	@Autowired
 	private PjMgmtTblMapper pjMgmtTblMapper;
+	@Autowired
+	private Util util;
+	
 	
 	
 	/**
@@ -53,7 +55,7 @@ public class EmployeeListService {
 							EmployeeListDto employeeListDto = new EmployeeListDto();
 							employeeListDto.setEmployeeId(e.getEmployeeId());
 							employeeListDto.setEmployeeName(e.getEmployeeName());
-							employeeListDto.setAge(calculateAge(e.getBirthday()));
+							employeeListDto.setAge(util.calculateAge(e.getBirthday()));
 							employeeListDto.setPjName(p.getPjName());
 							employeeListDto.setPjStartDate(p.getPjStartDate());
 
@@ -68,18 +70,6 @@ public class EmployeeListService {
 		return employeeList;
 	}
 
-	/*
-	 * 年齢計算
-	 */
-	public int calculateAge(Date birthDate) {
-		Calendar birthCal = Calendar.getInstance();
-		birthCal.setTime(birthDate);
-		Calendar nowCal = Calendar.getInstance();
-		int age = nowCal.get(Calendar.YEAR) - birthCal.get(Calendar.YEAR);
-		if(nowCal.get(Calendar.DAY_OF_YEAR) < birthCal.get(Calendar.DAY_OF_YEAR)) {
-			age--;
-		}
-		return age;
-	}
+
 	
 }

@@ -1,5 +1,5 @@
 package com.example.demo.dto;
-import java.util.Date;
+import java.time.LocalDate;
 
 import lombok.Data;
 
@@ -27,5 +27,5 @@ public class EmployeeListDto {
 	/**
 	 * 参画日
 	 */
-	private Date pjStartDate;
+	private LocalDate pjStartDate;
 }

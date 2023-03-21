@@ -1,4 +1,5 @@
 package com.example.demo.entity;
+import java.time.LocalDate;
 import java.util.Date;
 import lombok.Data;
 /**
@@ -21,7 +22,7 @@ public class EmployeeMst {
     /**
      * 入社日
      */
-    private Date startDate;
+    private LocalDate startDate;
 	/**
      * 役職ID
      */

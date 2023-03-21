@@ -20,5 +20,5 @@ public class PaidHolMgmtTbl {
     /**
      * 有給使用数
      */
-    private int idHolsUsed;
+    private int paidHolsUsed;
 }
