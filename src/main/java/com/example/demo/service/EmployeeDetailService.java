@@ -52,7 +52,7 @@ public class EmployeeDetailService {
 	 * 社員詳細情報生成
 	 * @return
 	 */
-	public EmployeeDetailDto detailJoin(String id) {
+	public EmployeeDetailDto getEmployeeDetailsById(String id) {
 
 		// ﾃｰﾌﾞﾙから値を取得
 		List<EmployeeMst> employeeMstList = employeeMstMapper.selectAll();

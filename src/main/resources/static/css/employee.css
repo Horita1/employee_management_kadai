@@ -1,0 +1,12 @@
+
+.notificationList {
+  color: red;
+}
+.employeeList th {
+  background-color: blue;
+  color: white;
+}
+
+.modal-body th {
+  background-color: lightgreen;
+}
